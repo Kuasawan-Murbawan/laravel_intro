@@ -26,3 +26,12 @@ Route::middleware([
         return view('dashboard');
     })->name('dashboard');
 });
+
+
+Route::get('/careers', function () {
+    return view('components/careers');
+});
+
+Route::get('/about', function(){
+    return view('about');
+});
