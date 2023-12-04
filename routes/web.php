@@ -37,6 +37,10 @@ Route::get('/about/{username}/{age}', function($username,$age){
     return view('about', ['username' => $username], ['age' => $age]);
 });
 
+Route::get('/contact', function(){
+    return view('contact');
+});
+
 Route::fallback(function(){
     return view('error');
 });

@@ -32,19 +32,9 @@ a:hover {
 }
 </style>
 </head>
-<body>
 
-  <h1>About Us</h1>
 
-  <br>
+<h1>Contact Us</h2>
 
-  <p>Username: {{ $username }}</p>
-  <p>Age: {{ $age }}</p>
-
-  <br>
-
-  <a href="/">Homepage</a>
-  <a href="/contact">Contact Us</a>
-
-</body>
-</html>
+<a href='/'>Homepage</a>
+<a href='/about/husyairi/21'>About Us</a>
