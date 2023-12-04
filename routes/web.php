@@ -32,6 +32,11 @@ Route::get('/careers', function () {
     return view('components/careers');
 });
 
-Route::get('/about', function(){
-    return view('about');
+
+Route::get('/about/{username}/{age}', function($username,$age){
+    return view('about', ['username' => $username], ['age' => $age]);
+});
+
+Route::fallback(function(){
+    return view('error');
 });

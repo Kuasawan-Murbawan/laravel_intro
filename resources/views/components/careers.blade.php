@@ -2,4 +2,4 @@
 
 <br>
 
-<a href="about">About</a>
+<a href="/">Homepage</a>
