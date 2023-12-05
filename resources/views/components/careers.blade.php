@@ -2,4 +2,8 @@
 
 <br>
 
+<p>Welcome, {{$adminName}}</p>
+
+<br>
+
 <a href="/">Homepage</a>

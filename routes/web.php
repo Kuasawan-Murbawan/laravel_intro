@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\CareerController;
 
 /*
 |--------------------------------------------------------------------------
@@ -28,10 +29,6 @@ Route::middleware([
 });
 
 
-Route::get('/careers', function () {
-    return view('components/careers');
-});
-
 
 Route::get('/about/{username}/{age}', function($username,$age){
     return view('about', ['username' => $username], ['age' => $age]);
@@ -44,3 +41,9 @@ Route::get('/contact', function(){
 Route::fallback(function(){
     return view('error');
 });
+
+
+// Using controllers
+Route::get('/careers', [CareerController::class, 'basic']);
+
+Route::get('/careers/{adminName}', [CareerController::class, 'adminPage']);
