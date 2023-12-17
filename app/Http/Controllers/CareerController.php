@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Models\Career; // Import the Career class
 
 class CareerController extends Controller
 {
@@ -16,4 +17,11 @@ class CareerController extends Controller
         echo "This routing is done using CareerController (adminPage) <br>";
 
         return view('components/careers', compact('adminName'));    }
+
+    public function positions(){
+        return view('components/careers', 
+            ['careers' => Career::all() // passing all records in database
+        ]);
+
+    }
 }

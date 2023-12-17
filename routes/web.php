@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\CareerController;
+use App\Http\Controllers\DoublerController;
 
 /*
 |--------------------------------------------------------------------------
@@ -44,6 +45,13 @@ Route::fallback(function(){
 
 
 // Using controllers
-Route::get('/careers', [CareerController::class, 'basic']);
+//Route::get('/careers', [CareerController::class, 'basic']);
 
-Route::get('/careers/{adminName}', [CareerController::class, 'adminPage']);
+//Route::get('/careers/{adminName}', [CareerController::class, 'adminPage']);
+
+
+// Doubler controller
+Route::get('/doubler/{number}', [DoublerController::class, 'index']);
+
+Route::get('/careers', [CareerController::class, 'positions'] );
+    

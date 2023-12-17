@@ -8,6 +8,7 @@ return new class extends Migration
 {
     /**
      * Run the migrations.
+     * execute the sql codes
      */
     public function up(): void
     {
@@ -26,6 +27,7 @@ return new class extends Migration
 
     /**
      * Reverse the migrations.
+     * undo the changes
      */
     public function down(): void
     {
