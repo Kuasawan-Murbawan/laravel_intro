@@ -24,4 +24,5 @@ class CareerController extends Controller
         ]);
 
     }
+
 }

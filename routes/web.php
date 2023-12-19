@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\CareerController;
 use App\Http\Controllers\DoublerController;
+use App\Http\Controllers\PositionController;
 
 /*
 |--------------------------------------------------------------------------
@@ -17,7 +18,7 @@ use App\Http\Controllers\DoublerController;
 
 Route::get('/', function () {
     return view('welcome');
-});
+})->name('welcome');
 
 Route::middleware([
     'auth:sanctum',
@@ -47,11 +48,14 @@ Route::fallback(function(){
 // Using controllers
 //Route::get('/careers', [CareerController::class, 'basic']);
 
+// Routing using controllers, need to pass a name in the url to go to the admin page
 //Route::get('/careers/{adminName}', [CareerController::class, 'adminPage']);
 
 
 // Doubler controller
 Route::get('/doubler/{number}', [DoublerController::class, 'index']);
 
-Route::get('/careers', [CareerController::class, 'positions'] );
+
+Route::get('/careers', [CareerController::class, 'positions'] )->name('careers');
     
+Route::post('/careers', [PositionController::class, 'store']) -> name('job.create');
