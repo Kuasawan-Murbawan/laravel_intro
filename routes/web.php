@@ -4,6 +4,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\CareerController;
 use App\Http\Controllers\DoublerController;
 use App\Http\Controllers\PositionController;
+use App\Http\Controllers\ApplicationController;
 
 /*
 |--------------------------------------------------------------------------
@@ -59,3 +60,7 @@ Route::get('/doubler/{number}', [DoublerController::class, 'index']);
 Route::get('/careers', [CareerController::class, 'positions'] )->name('careers');
     
 Route::post('/careers', [PositionController::class, 'store']) -> name('job.create');
+
+Route::get('/contact', [ApplicationController::class,'index']) -> name('applications-list');
+
+Route::post('contact', [ApplicationController::class, 'store']) -> name('create.application');
