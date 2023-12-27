@@ -52,6 +52,17 @@
             text-decoration: none;
             border-radius: 6px;
         }
+
+        #successfully_created_alert {
+            display: block;
+            margin-top: 20px;
+            padding: 10px 20px;
+            background-color: #ee7b4677;
+            color: white;
+            text-decoration: none;
+            border-radius: 6px;
+            margin-bottom: 20px
+        }
     </style>
 </head>
 
@@ -60,6 +71,15 @@
         <h2>Careers</h2>
     </header>
     <main>
+
+        @if (session()->has('success'))
+            <div role="alert" id="successfully_created_alert">
+                {{ session('success') }}
+            </div>
+        @endif
+
+
+
         <table>
             <tr>
                 <th>Positions</th>

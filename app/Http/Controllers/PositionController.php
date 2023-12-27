@@ -15,7 +15,7 @@ class PositionController extends Controller
         ]);
         $career -> save();
 
-        return redirect()->route('careers');
+        return redirect()->route('careers')->with('success','Position created successfully');
 
     }
 }

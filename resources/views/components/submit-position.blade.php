@@ -41,6 +41,9 @@
     </style>
 </head>
 
+
+
+
 <body>
     <form action="{{ route('job.create') }}" method="POST" class="job-create-form">
         @csrf
